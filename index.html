@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <title>应聘登记表</title>
     <link rel="stylesheet" href="./css/index.css">
+    <!-- 表格插件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />
+    <!-- 时间插件 -->
     <link rel="stylesheet" href="./css/LCalendar.css">
-    <script src="./js/LCalendar.js" type="module"></script>
-    <script src="./js/index.js"></script>
 </head>
 
 <body>
@@ -25,174 +26,236 @@
             <form action="">
                 <!-- 应聘岗位 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>应聘岗位</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>应聘岗位</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" placeholder="请输入">
                 </div>
                 <!-- 填表日期 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>填表日期</p>
-                    <!-- <input id="demo1" type="text" readonly="" placeholder="请输入日期" /> -->
-                    <!-- <select id="date" name="">
-                        <option></option>
-                    </select> -->
-                    <input type="text" id="date" list="datelist" placeholder="请选择 v" required>
-                    <!-- <datalist id="datelist">
-                        <option value="男"></option>
-                        <option value="女"></option>
-                    </datalist> -->
+                    <span><span class="redstar">*</span>填表日期</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" id="date1" name="myipt" list="datelist" placeholder="请选择 v">
                 </div>
                 <!-- 姓名 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>姓名</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>姓名</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" placeholder="请输入">
                 </div>
 
                 <!-- 性别 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>性别</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>性别</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" list="sex" name="myipt" placeholder="请输入">
+                    <datalist id="sex">
+                        <option value="男"></option>
+                        <option value="女"></option>
+                    </datalist>
                 </div>
 
                 <!-- 出生日期 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>出生日期</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>出生日期</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" id="date2" name="myipt" list="datelist" placeholder="请选择 v">
                 </div>
 
                 <!-- 民族 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>民族</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>民族</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" placeholder="请输入">
                 </div>
 
                 <!-- 政治面貌 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>政治面貌</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>政治面貌</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" placeholder="请输入">
                 </div>
 
                 <!-- 婚否 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>婚否</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>婚否</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" list="mar" placeholder="请输入">
+                    <datalist id="mar">
+                        <option value="未婚"></option>
+                        <option value="已婚"></option>
+                        <option value="离婚"></option>
+                    </datalist>
                 </div>
 
                 <!-- 健康状态 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>健康状态</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>健康状态</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" placeholder="请输入">
                 </div>
 
                 <!-- 籍贯 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>籍贯（省、市）</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>籍贯（省、市）</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" placeholder="请输入">
                 </div>
 
                 <!-- 联系方式 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>联系方式</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>联系方式</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" placeholder="请输入">
                 </div>
 
                 <!-- 电子邮箱 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>电子邮箱</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>电子邮箱</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" placeholder="请输入">
                 </div>
 
                 <!-- 学历 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>学历</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>学历</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" placeholder="请输入">
                 </div>
 
                 <!-- 现住地 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>现住地</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>现住地</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" placeholder="请输入">
                 </div>
 
                 <!-- 目前是否在职 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>目前是否在职</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>目前是否在职</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" placeholder="请输入">
                 </div>
 
                 <!-- 预计到岗时间 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>预计到岗时间</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>预计到岗时间</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" id="date3" name="myipt" list="datelist" placeholder="请选择 v">
                 </div>
 
                 <!-- 期望薪资 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>期望薪资</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>期望薪资</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" placeholder="请输入">
                 </div>
 
                 <!-- 外语水平 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>外语水平</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>外语水平</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" placeholder="请输入">
                 </div>
 
                 <!-- 计算机水平 -->
                 <div class="datatxt">
-                    <p><span class="redstar">*</span>计算机水平</p>
-                    <input type="text" placeholder="请输入" required>
+                    <span><span class="redstar">*</span>计算机水平</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <input type="text" name="myipt" placeholder="请输入">
                 </div>
 
                 <!-- 教育经历 -->
-                <div class="datatxt">
-                    <p><span class="redstar">*</span>教育经历（请至少完整填写一行）</p>
-                    <input type="text" placeholder="请输入" required>
+                <div class="datatxt tab1">
+                    <span><span class="redstar">*</span>教育经历（请至少完整填写一行）</span><span
+                        class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <div id="example1"></div>
                 </div>
 
                 <!-- 工作经历 -->
-                <div class="datatxt">
-                    <p><span class="redstar">*</span>工作经历（请至少完整填写一行，没有则写<span class="redstar">"无"</span>）</p>
-                    <input type="text" placeholder="请输入" required>
+                <div class="datatxt tab2">
+                    <span><span class="redstar">*</span>工作经历（请至少完整填写一行，没有则写<span class="redstar">"无"</span>）</span><span
+                        class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <div id="example2"></div>
                 </div>
 
                 <!-- 个人荣誉 -->
                 <div class="datatxt">
-                    <p>个人荣誉</p>
+                    <span>个人荣誉</span>
                     <input type="text" placeholder="请输入">
                 </div>
 
                 <!-- 兴趣特长 -->
                 <div class="datatxt">
-                    <p>兴趣特长</p>
+                    <span>兴趣特长</span>
                     <input type="text" placeholder="请输入">
                 </div>
 
                 <!-- 自我评价 -->
                 <div class="datatxt lastdiv">
-                    <p><span class="redstar">*</span>自我评价</p>
-                    <textarea cols="5" rows="5" placeholder="请输入" required></textarea>
+                    <span><span class="redstar">*</span>自我评价</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
+                    <textarea cols="5" rows="5" name="myipt" placeholder="请输入"></textarea>
                 </div>
 
-                <div class="submit">
-                    <input type="submit" value="提交">
+                <div class="submit" onclick="isEmpty()">
+                    <!-- 设置type="button" 防止页面刷新 -->
+                    <button type="button">提交</button>
                 </div>
             </form>
 
         </div>
-        <!-- 页尾 -->
-        <div class="footer"></div>
     </div>
-    <script type="module">
-        import LCalender from './js/LCalendar.js';
-        // 初始化日期插件
-        var calendar = new LCalendar();
-        calendar.init({
-            'trigger': '#date',//标签id
-            'type': 'date',//date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择
-            'minDate': '1900-1-1',//最小日期 注意：该值会覆盖标签内定义的日期范围
-            'maxDate': '2022-2-11'//最大日期 注意：该值会覆盖标签内定义的日期范围
-        });
-    </script>
 </body>
+<!-- 表格插件 -->
+<script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+<!-- 时间插件 -->
+<script src="./js/LCalendar.js" type="module"></script>
+<!-- index.js -->
+<script src="./js/index.js"></script>
+<script type="module">
+    // 引入日期插件
+    import LCalender from './js/LCalendar.js';
+    // 初始化日期插件
+    var calendar1 = new LCalendar();
+    var calendar2 = new LCalendar();
+    var calendar3 = new LCalendar();
+    calendar1.init({
+        'trigger': '#date1',//标签id
+        'type': 'date',//date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择
+        'minDate': '1900-1-1',//最小日期 注意：该值会覆盖标签内定义的日期范围
+        'maxDate': '2022-2-11'//最大日期 注意：该值会覆盖标签内定义的日期范围
+    });
+    calendar2.init({
+        'trigger': '#date2',//标签id
+        'type': 'date',//date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择
+        'minDate': '1900-1-1',//最小日期 注意：该值会覆盖标签内定义的日期范围
+        'maxDate': '2022-2-11'//最大日期 注意：该值会覆盖标签内定义的日期范围
+    });
+    calendar3.init({
+        'trigger': '#date3',//标签id
+        'type': 'date',//date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择
+        'minDate': '1900-1-1',//最小日期 注意：该值会覆盖标签内定义的日期范围
+        'maxDate': '2022-2-11'//最大日期 注意：该值会覆盖标签内定义的日期范围
+    });
+    // 初始化表格插件
+    const container1 = document.getElementById('example1');
+    const container2 = document.getElementById('example2');
+
+    const hot1 = new Handsontable(container1, {
+        data: [],
+        dataSchema: { id: null, name: { first: null, last: null }, address: null },
+        startRows: 5,
+        startCols: 4,
+        colHeaders: ['时间', '毕业院校', '专业', '详细情况'],
+        height: 'auto',
+        width: 'auto',
+        columns: [
+            { data: 'id' },
+            { data: 'name.first' },
+            { data: 'name.last' },
+            { data: 'address' }
+        ],
+        minSpareRows: 3,
+        licenseKey: 'non-commercial-and-evaluation'
+    });
+    const hot2 = new Handsontable(container2, {
+        data: [],
+        dataSchema: { id: null, name: { first: null, last: null }, address: null },
+        startRows: 5,
+        startCols: 4,
+        colHeaders: ['时间', '公司名称', '职务', '职责'],
+        height: 'auto',
+        width: 'auto',
+        columns: [
+            { data: 'id' },
+            { data: 'name.first' },
+            { data: 'name.last' },
+            { data: 'address' }
+        ],
+        minSpareRows: 3,
+        licenseKey: 'non-commercial-and-evaluation'
+    });
+
+</script>
 
 </html>

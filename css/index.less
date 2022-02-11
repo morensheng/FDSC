@@ -86,13 +86,12 @@ html {
     }
 }
 
-@basesize: .7rem;
+@basesize: .65rem;
 
 .main {
     width: 100%;
     margin: 0.5rem 0 0.5rem 1rem;
     font-size: @basesize;
-    position: relative;
     overflow: hidden;
 
     .datatxt {
@@ -103,7 +102,8 @@ html {
         border-bottom: 1px solid #ccc;
         margin-bottom: .6rem;
 
-        .redstar {
+        .redstar,
+        .redtxt {
             color: red;
         }
 
@@ -116,6 +116,8 @@ html {
             width: 90%;
             outline: none;
             font-size: @basesize;
+            display: block;
+            margin-top: .4rem;
         }
 
         // #date {
@@ -127,9 +129,20 @@ html {
 
     }
 
+    .tab1,
+    .tab2 {
+        height: 7rem;
+
+        #example1,
+        #example2 {
+            margin: .2rem 2.8rem;
+        }
+    }
+
+
     .lastdiv {
         height: 5.2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
 
         textarea {
             width: 90%;
@@ -145,15 +158,18 @@ html {
     }
 
     .submit {
-        input {
+        button {
             width: 90%;
             height: 1.5rem;
+            outline: none;
+            border: none;
             color: #fff;
-            position: absolute;
-            bottom: 0;
-            left: 0;
             background-color: rgb(110, 150, 186);
         }
 
     }
+}
+
+.hid {
+    display: none;
 }

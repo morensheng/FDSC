@@ -71,8 +71,7 @@ html {
 .main {
   width: 100%;
   margin: 0.5rem 0 0.5rem 1rem;
-  font-size: 0.7rem;
-  position: relative;
+  font-size: 0.65rem;
   overflow: hidden;
 }
 .main .datatxt {
@@ -83,21 +82,34 @@ html {
   border-bottom: 1px solid #ccc;
   margin-bottom: 0.6rem;
 }
-.main .datatxt .redstar {
+.main .datatxt .redstar,
+.main .datatxt .redtxt {
   color: red;
 }
 .main .datatxt input::placeholder {
   color: #ccc;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
 }
 .main .datatxt input {
   width: 90%;
   outline: none;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
+  display: block;
+  margin-top: 0.4rem;
+}
+.main .tab1,
+.main .tab2 {
+  height: 7rem;
+}
+.main .tab1 #example1,
+.main .tab2 #example1,
+.main .tab1 #example2,
+.main .tab2 #example2 {
+  margin: 0.2rem 2.8rem;
 }
 .main .lastdiv {
   height: 5.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 .main .lastdiv textarea {
   width: 90%;
@@ -106,15 +118,17 @@ html {
 }
 .main .lastdiv textarea::placeholder {
   color: #ccc;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
 }
-.main .submit input {
+.main .submit button {
   width: 90%;
   height: 1.5rem;
+  outline: none;
+  border: none;
   color: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   background-color: #6e96ba;
+}
+.hid {
+  display: none;
 }
 /*# sourceMappingURL=./index.css.map */
