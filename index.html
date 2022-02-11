@@ -190,9 +190,15 @@
 <script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
 <!-- 时间插件 -->
 <script src="./js/LCalendar.js" type="module"></script>
-<!-- index.js -->
-<script src="./js/index.js"></script>
 <script type="module">
+    function sj(a) {
+        var dd = new Date();
+        dd.setDate(dd.getDate() + a);//获取AddDayCount天后的日期
+        var y = dd.getFullYear();
+        var m = dd.getMonth() + 1;//获取当前月份的日期
+        var d = dd.getDate();
+        return y + "-" + m + "-" + d;
+    }
     // 引入日期插件
     import LCalender from './js/LCalendar.js';
     // 初始化日期插件
@@ -203,19 +209,19 @@
         'trigger': '#date1',//标签id
         'type': 'date',//date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择
         'minDate': '1900-1-1',//最小日期 注意：该值会覆盖标签内定义的日期范围
-        'maxDate': '2022-2-11'//最大日期 注意：该值会覆盖标签内定义的日期范围
+        'maxDate': sj(0)//最大日期 注意：该值会覆盖标签内定义的日期范围
     });
     calendar2.init({
         'trigger': '#date2',//标签id
         'type': 'date',//date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择
         'minDate': '1900-1-1',//最小日期 注意：该值会覆盖标签内定义的日期范围
-        'maxDate': '2022-2-11'//最大日期 注意：该值会覆盖标签内定义的日期范围
+        'maxDate': sj(0)//最大日期 注意：该值会覆盖标签内定义的日期范围
     });
     calendar3.init({
         'trigger': '#date3',//标签id
         'type': 'date',//date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择
         'minDate': '1900-1-1',//最小日期 注意：该值会覆盖标签内定义的日期范围
-        'maxDate': '2022-2-11'//最大日期 注意：该值会覆盖标签内定义的日期范围
+        'maxDate': sj(0)//最大日期 注意：该值会覆盖标签内定义的日期范围
     });
     // 初始化表格插件
     const container1 = document.getElementById('example1');
@@ -255,7 +261,23 @@
         minSpareRows: 3,
         licenseKey: 'non-commercial-and-evaluation'
     });
+    // input的非空验证
+    function isEmpty() {
+        const iptval = document.getElementsByName('myipt');
+        const redtxt = document.getElementsByClassName('redtxt');
+        for (let i = 0; i < iptval.length; i++) {
+            redtxt[i].classList.add('hid');
+            if (iptval[i].value === '') {
+                redtxt[i].classList.remove('hid');
+            }
+            else {
+                console.log('已提交表单');
+            }
 
+
+        }
+
+    }
 </script>
 
 </html>
