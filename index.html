@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <title>应聘登记表</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/LCalendar.css">
+    <script src="./js/LCalendar.js" type="module"></script>
     <script src="./js/index.js"></script>
 </head>
 
@@ -21,9 +23,22 @@
         <!-- 主要内容 -->
         <div class="main">
             <form action="">
+                <!-- 应聘岗位 -->
                 <div class="datatxt">
                     <p><span class="redstar">*</span>应聘岗位</p>
                     <input type="text" placeholder="请输入">
+                </div>
+                <!-- 填表日期 -->
+                <div class="datatxt">
+                    <p><span class="redstar">*</span>填表日期</p>
+                    <!-- <input id="demo1" type="text" readonly="" placeholder="请输入日期" /> -->
+                    <select id="date" name="">
+                    </select>
+                    <!-- <input type="text" id="date" list="datelist">
+                    <datalist id="datelist">
+                        <option value="男"></option>
+                        <option value="女"></option>
+                    </datalist> -->
                 </div>
 
             </form>
@@ -31,6 +46,17 @@
         <!-- 页尾 -->
         <div class="footer"></div>
     </div>
+    <script type="module">
+        import LCalender from './js/LCalendar.js';
+        // 初始化日期插件
+        var calendar = new LCalendar();
+        calendar.init({
+            'trigger': '#date',//标签id
+            'type': 'date',//date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择
+            'minDate': '1900-1-1',//最小日期 注意：该值会覆盖标签内定义的日期范围
+            'maxDate': '2022-2-11'//最大日期 注意：该值会覆盖标签内定义的日期范围
+        });
+    </script>
 </body>
 
 </html>

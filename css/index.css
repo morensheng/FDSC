@@ -50,6 +50,9 @@ a {
 html {
   font-size: 5.33333vw;
 }
+.box {
+  overflow: hidden;
+}
 .header {
   width: 100%;
   height: 3rem;
@@ -66,15 +69,16 @@ html {
   margin-top: 0.5rem;
 }
 .main {
-  margin: 0.5rem 1rem;
+  margin: 0.5rem 0 0.5rem 1rem;
   font-size: 0.8rem;
 }
 .main .datatxt {
-  width: 100vw;
+  width: 100%;
   height: 2.8rem;
   line-height: 1.4rem;
   box-sizing: content-box;
   border-bottom: 1px solid #ccc;
+  margin-bottom: 0.6rem;
 }
 .main .datatxt .redstar {
   color: red;
@@ -84,6 +88,12 @@ html {
   font-size: 0.8rem;
 }
 .main .datatxt input {
+  outline: none;
   font-size: 0.8rem;
+}
+.main .datatxt #date {
+  width: 80%;
+  margin: 0 20px;
+  height: 1.2rem;
 }
 /*# sourceMappingURL=./index.css.map */
