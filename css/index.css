@@ -88,6 +88,7 @@ html {
   font-size: 0.8rem;
 }
 .main .datatxt input {
+  width: 80%;
   outline: none;
   font-size: 0.8rem;
 }
