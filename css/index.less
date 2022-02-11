@@ -86,11 +86,12 @@ html {
     }
 }
 
+@basesize: .7rem;
+
 .main {
     width: 100%;
-    // height: 88rem;
     margin: 0.5rem 0 0.5rem 1rem;
-    font-size: 0.4rem;
+    font-size: @basesize;
     position: relative;
     overflow: hidden;
 
@@ -108,13 +109,13 @@ html {
 
         input::placeholder {
             color: #ccc;
-            font-size: 0.4rem;
+            font-size: @basesize;
         }
 
         input {
             width: 90%;
             outline: none;
-            font-size: 0.4rem;
+            font-size: @basesize;
         }
 
         // #date {
@@ -138,7 +139,7 @@ html {
 
         textarea::placeholder {
             color: #ccc;
-            font-size: 0.4rem;
+            font-size: @basesize;
         }
 
     }

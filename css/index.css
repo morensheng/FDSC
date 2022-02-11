@@ -71,7 +71,7 @@ html {
 .main {
   width: 100%;
   margin: 0.5rem 0 0.5rem 1rem;
-  font-size: 0.4rem;
+  font-size: 0.7rem;
   position: relative;
   overflow: hidden;
 }
@@ -88,12 +88,12 @@ html {
 }
 .main .datatxt input::placeholder {
   color: #ccc;
-  font-size: 0.4rem;
+  font-size: 0.7rem;
 }
 .main .datatxt input {
   width: 90%;
   outline: none;
-  font-size: 0.4rem;
+  font-size: 0.7rem;
 }
 .main .lastdiv {
   height: 5.2rem;
@@ -106,7 +106,7 @@ html {
 }
 .main .lastdiv textarea::placeholder {
   color: #ccc;
-  font-size: 0.4rem;
+  font-size: 0.7rem;
 }
 .main .submit input {
   width: 90%;
