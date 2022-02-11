@@ -69,8 +69,11 @@ html {
   margin-top: 0.5rem;
 }
 .main {
+  width: 100%;
   margin: 0.5rem 0 0.5rem 1rem;
-  font-size: 0.8rem;
+  font-size: 0.4rem;
+  position: relative;
+  overflow: hidden;
 }
 .main .datatxt {
   width: 100%;
@@ -85,16 +88,33 @@ html {
 }
 .main .datatxt input::placeholder {
   color: #ccc;
-  font-size: 0.8rem;
+  font-size: 0.4rem;
 }
 .main .datatxt input {
-  width: 80%;
+  width: 90%;
   outline: none;
-  font-size: 0.8rem;
+  font-size: 0.4rem;
 }
-.main .datatxt #date {
-  width: 80%;
-  margin: 0 20px;
-  height: 1.2rem;
+.main .lastdiv {
+  height: 5.2rem;
+  margin-bottom: 2rem;
+}
+.main .lastdiv textarea {
+  width: 90%;
+  outline: none;
+  border: none;
+}
+.main .lastdiv textarea::placeholder {
+  color: #ccc;
+  font-size: 0.4rem;
+}
+.main .submit input {
+  width: 90%;
+  height: 1.5rem;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #6e96ba;
 }
 /*# sourceMappingURL=./index.css.map */
