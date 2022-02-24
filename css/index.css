@@ -97,6 +97,7 @@ html {
   display: block;
   margin-top: 0.4rem;
 }
+<<<<<<< HEAD
 .main .tab1,
 .main .tab2 {
   height: 7rem;
@@ -106,6 +107,73 @@ html {
 .main .tab1 #example2,
 .main .tab2 #example2 {
   margin: 0.2rem 2.8rem;
+=======
+.main .datatxt .dsex {
+  width: 90%;
+  height: 1.2rem;
+  margin: auto;
+  border-bottom: none;
+  margin-top: 0.18rem;
+  margin-left: 0.2rem;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .datatxt .dsex select {
+  border: none;
+  outline: none;
+  font-size: 0.65rem;
+}
+.main .datatxt #date1,
+.main .datatxt #date2,
+.main .datatxt #date3 {
+  height: 1.2rem;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  margin-top: 0.18rem;
+  margin-left: 0.2rem;
+}
+.main .datatxt #date1::placeholder,
+.main .datatxt #date2::placeholder,
+.main .datatxt #date3::placeholder {
+  padding-left: 7rem;
+  color: #000;
+}
+.main .datatxt .tabbor {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main .datatxt .tabbor table {
+  width: 90%;
+  text-align: center;
+  border-spacing: 0;
+  border-radius: inherit;
+  border: solid 1px #000;
+}
+.main .datatxt .tabbor table tr {
+  height: 1.3rem;
+}
+.main .datatxt .tabbor table tr:last-child td {
+  border-bottom: none;
+}
+.main .datatxt .tabbor table tr td {
+  border: 1px solid #000;
+  height: 30px;
+  text-align: center;
+  border-top: none;
+}
+.main .datatxt .tabbor table tr td:last-child {
+  border-right: none;
+}
+.main .datatxt .tabbor table tr td input {
+  margin: 0;
+}
+.main .tab1,
+.main .tab2 {
+  height: 7.5rem;
+>>>>>>> e88f2f9 (完毕)
 }
 .main .lastdiv {
   height: 5.2rem;
@@ -113,8 +181,16 @@ html {
 }
 .main .lastdiv textarea {
   width: 90%;
+<<<<<<< HEAD
   outline: none;
   border: none;
+=======
+  font-family: '';
+  font-size: 0.65rem;
+  outline: none;
+  border: none;
+  resize: none;
+>>>>>>> e88f2f9 (完毕)
 }
 .main .lastdiv textarea::placeholder {
   color: #ccc;
