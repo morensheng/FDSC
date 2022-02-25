@@ -97,17 +97,6 @@ html {
   display: block;
   margin-top: 0.4rem;
 }
-<<<<<<< HEAD
-.main .tab1,
-.main .tab2 {
-  height: 7rem;
-}
-.main .tab1 #example1,
-.main .tab2 #example1,
-.main .tab1 #example2,
-.main .tab2 #example2 {
-  margin: 0.2rem 2.8rem;
-=======
 .main .datatxt .dsex {
   width: 90%;
   height: 1.2rem;
@@ -173,7 +162,6 @@ html {
 .main .tab1,
 .main .tab2 {
   height: 7.5rem;
->>>>>>> e88f2f9 (完毕)
 }
 .main .lastdiv {
   height: 5.2rem;
@@ -181,16 +169,11 @@ html {
 }
 .main .lastdiv textarea {
   width: 90%;
-<<<<<<< HEAD
-  outline: none;
-  border: none;
-=======
   font-family: '';
   font-size: 0.65rem;
   outline: none;
   border: none;
   resize: none;
->>>>>>> e88f2f9 (完毕)
 }
 .main .lastdiv textarea::placeholder {
   color: #ccc;

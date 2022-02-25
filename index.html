@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <title>应聘登记表</title>
     <link rel="stylesheet" href="./css/index.css">
-    <!-- 表格插件 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />
     <!-- 时间插件 -->
     <link rel="stylesheet" href="./css/LCalendar.css">
 </head>
@@ -32,11 +30,7 @@
                 <!-- 填表日期 -->
                 <div class="datatxt">
                     <span><span class="redstar">*</span>填表日期</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
-<<<<<<< HEAD
-                    <input type="text" id="date1" name="myipt" list="datelist" placeholder="请选择 v">
-=======
                     <input type="text" id="date1" readonly unselectable="on" placeholder="请选择 ˅">
->>>>>>> e88f2f9 (完毕)
                 </div>
                 <!-- 姓名 -->
                 <div class="datatxt">
@@ -47,13 +41,6 @@
                 <!-- 性别 -->
                 <div class="datatxt">
                     <span><span class="redstar">*</span>性别</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
-<<<<<<< HEAD
-                    <input type="text" list="sex" name="myipt" placeholder="请输入">
-                    <datalist id="sex">
-                        <option value="男"></option>
-                        <option value="女"></option>
-                    </datalist>
-=======
                     <div class="dsex">
                         <select>
                             <option>请选择</option>
@@ -61,18 +48,13 @@
                             <option>女</option>
                         </select>
                     </div>
->>>>>>> e88f2f9 (完毕)
                 </div>
 
                 <!-- 出生日期 -->
                 <div class="datatxt">
                     <span><span class="redstar">*</span>出生日期</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
-<<<<<<< HEAD
-                    <input type="text" id="date2" name="myipt" list="datelist" placeholder="请选择 v">
-=======
                     <input type="text" id="date2" readonly unselectable="on" placeholder="请选择 ˅">
 
->>>>>>> e88f2f9 (完毕)
                 </div>
 
                 <!-- 民族 -->
@@ -90,14 +72,6 @@
                 <!-- 婚否 -->
                 <div class="datatxt">
                     <span><span class="redstar">*</span>婚否</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
-<<<<<<< HEAD
-                    <input type="text" name="myipt" list="mar" placeholder="请输入">
-                    <datalist id="mar">
-                        <option value="未婚"></option>
-                        <option value="已婚"></option>
-                        <option value="离婚"></option>
-                    </datalist>
-=======
                     <div class="dsex">
                         <select>
                             <option>请选择</option>
@@ -106,7 +80,6 @@
                             <option>离婚</option>
                         </select>
                     </div>
->>>>>>> e88f2f9 (完毕)
                 </div>
 
                 <!-- 健康状态 -->
@@ -154,11 +127,7 @@
                 <!-- 预计到岗时间 -->
                 <div class="datatxt">
                     <span><span class="redstar">*</span>预计到岗时间</span><span class="redtxt hid">&nbsp;内容不能为空！</span>
-<<<<<<< HEAD
-                    <input type="text" id="date3" name="myipt" list="datelist" placeholder="请选择 v">
-=======
                     <input type="text" id="date3" readonly unselectable="on" placeholder="请选择 ˅">
->>>>>>> e88f2f9 (完毕)
                 </div>
 
                 <!-- 期望薪资 -->
@@ -183,9 +152,6 @@
                 <div class="datatxt tab1">
                     <span><span class="redstar">*</span>教育经历（请至少完整填写一行）</span><span
                         class="redtxt hid">&nbsp;内容不能为空！</span>
-<<<<<<< HEAD
-                    <div id="example1"></div>
-=======
                     <div class="tabbor">
                         <table>
                             <tr>
@@ -214,16 +180,12 @@
                             </tr>
                         </table>
                     </div>
->>>>>>> e88f2f9 (完毕)
                 </div>
 
                 <!-- 工作经历 -->
                 <div class="datatxt tab2">
                     <span><span class="redstar">*</span>工作经历（请至少完整填写一行，没有则写<span class="redstar">"无"</span>）</span><span
                         class="redtxt hid">&nbsp;内容不能为空！</span>
-<<<<<<< HEAD
-                    <div id="example2"></div>
-=======
                     <div class="tabbor">
                         <table>
                             <tr>
@@ -252,7 +214,6 @@
                             </tr>
                         </table>
                     </div>
->>>>>>> e88f2f9 (完毕)
                 </div>
 
                 <!-- 个人荣誉 -->
@@ -278,12 +239,10 @@
                     <button type="button">提交</button>
                 </div>
             </form>
-
+            <input type="text" id="sex1">
         </div>
     </div>
 </body>
-<!-- 表格插件 -->
-<script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
 <!-- 时间插件 -->
 <script src="./js/LCalendar.js" type="module"></script>
 <script type="module">
@@ -301,6 +260,7 @@
     var calendar1 = new LCalendar();
     var calendar2 = new LCalendar();
     var calendar3 = new LCalendar();
+    var calendar4 = new LCalendar();
     calendar1.init({
         'trigger': '#date1',//标签id
         'type': 'date',//date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择
@@ -319,47 +279,12 @@
         'minDate': '1900-1-1',//最小日期 注意：该值会覆盖标签内定义的日期范围
         'maxDate': sj(0)//最大日期 注意：该值会覆盖标签内定义的日期范围
     });
-<<<<<<< HEAD
-    // 初始化表格插件
-    const container1 = document.getElementById('example1');
-    const container2 = document.getElementById('example2');
-
-    const hot1 = new Handsontable(container1, {
-        data: [],
-        dataSchema: { id: null, name: { first: null, last: null }, address: null },
-        startRows: 5,
-        startCols: 4,
-        colHeaders: ['时间', '毕业院校', '专业', '详细情况'],
-        height: 'auto',
-        width: 'auto',
-        columns: [
-            { data: 'id' },
-            { data: 'name.first' },
-            { data: 'name.last' },
-            { data: 'address' }
-        ],
-        minSpareRows: 3,
-        licenseKey: 'non-commercial-and-evaluation'
+    calendar4.init({
+        'trigger': '#sex1',//标签id
+        'type': 'person',//date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择
+        'minDate': '1900-1-1',//最小日期 注意：该值会覆盖标签内定义的日期范围
+        'maxDate': sj(0)//最大日期 注意：该值会覆盖标签内定义的日期范围
     });
-    const hot2 = new Handsontable(container2, {
-        data: [],
-        dataSchema: { id: null, name: { first: null, last: null }, address: null },
-        startRows: 5,
-        startCols: 4,
-        colHeaders: ['时间', '公司名称', '职务', '职责'],
-        height: 'auto',
-        width: 'auto',
-        columns: [
-            { data: 'id' },
-            { data: 'name.first' },
-            { data: 'name.last' },
-            { data: 'address' }
-        ],
-        minSpareRows: 3,
-        licenseKey: 'non-commercial-and-evaluation'
-    });
-=======
->>>>>>> e88f2f9 (完毕)
     // input的非空验证
     function isEmpty() {
         const iptval = document.getElementsByName('myipt');
