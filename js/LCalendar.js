@@ -670,7 +670,6 @@ class MobileCalendar {
           getTemp(`${ystr}${mstr}${dstr}${hstr}${mistr}`, "datetime_roll")
         ), //呼出日期+时间插件
         time: this.popup("gearDate", getTemp(`${hstr}${mistr}`, "time_roll")), //呼出时间插件
-        person: this.popup('gearDate', getTemp(`${male}${female}`, 'ym_roll')),//呼出性别插件
       }[type]
     );
   }

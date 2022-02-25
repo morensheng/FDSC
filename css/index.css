@@ -126,7 +126,7 @@ html {
 .main .datatxt #date1::placeholder,
 .main .datatxt #date2::placeholder,
 .main .datatxt #date3::placeholder {
-  padding-left: 7rem;
+  text-align: center;
   color: #000;
 }
 .main .datatxt .tabbor {
@@ -186,8 +186,5 @@ html {
   border: none;
   color: #fff;
   background-color: #6e96ba;
-}
-.hid {
-  display: none;
 }
 /*# sourceMappingURL=./index.css.map */
